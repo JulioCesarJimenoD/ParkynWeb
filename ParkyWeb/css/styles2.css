@@ -1,0 +1,87 @@
+
+
+.container {
+  
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+  }
+  
+  .columna {
+
+    align-items: center;
+  text-align: right;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cuadro {
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
+  }
+
+
+  
+
+body{
+  background-color: #212524;
+
+}
+
+
+img {
+
+  width: 300px;
+  height: 300px;
+}
+
+
+.fondo-borroso::before {
+
+
+  content: "";
+  background-image: url('https://i.postimg.cc/HnNSKfWV/logo.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+
+  top: 30%;
+  left: 30%;
+
+
+  width: 200px;
+  height: 200px;
+
+  filter: blur(4px);
+  opacity: 0.6;
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  /* Estilos específicos para pantallas con ancho máximo de 768px */
+  /* Por ejemplo, cambiar el tamaño del texto o ajustar el diseño */
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Media query para pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos específicos para pantallas con ancho entre 768px y 1024px */
+  /* Por ejemplo, ajustar el diseño de los elementos */
+}
+
+/* Media query para pantallas grandes */
+@media screen and (min-width: 1024px) {
+  /* Estilos específicos para pantallas con ancho mayor a 1024px */
+  /* Por ejemplo, utilizar un diseño de múltiples columnas */
+}

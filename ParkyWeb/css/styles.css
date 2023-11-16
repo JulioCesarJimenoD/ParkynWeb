@@ -1,0 +1,74 @@
+/* styles.css */
+
+/* Estilos para el encabezado */
+header {
+    background-color:  #183047;
+    padding: 20px;
+    text-align: left;
+    
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body {
+    background-color: #48a2c9  ;
+
+  }
+
+  .contenedor {
+    text-align: center;
+    margin: 0;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+  img {
+
+    width: 300px;
+    height: 300px;
+  }
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas con ancho máximo de 768px */
+    /* Por ejemplo, cambiar el tamaño del texto o ajustar el diseño */
+    body {
+      font-size: 14px;
+    }
+    
+    /* Otros estilos específicos para pantallas más pequeñas */
+  }
+  
+  /* Media query para pantallas medianas */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Estilos específicos para pantallas con ancho entre 768px y 1024px */
+    /* Por ejemplo, ajustar el diseño de los elementos */
+  }
+  
+  /* Media query para pantallas grandes */
+  @media screen and (min-width: 1024px) {
+    /* Estilos específicos para pantallas con ancho mayor a 1024px */
+    /* Por ejemplo, utilizar un diseño de múltiples columnas */
+  }
+  
+
+
+  
