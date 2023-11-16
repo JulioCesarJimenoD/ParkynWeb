@@ -1,4 +1,27 @@
-// Obtener todos los cuadros por su clase
+
+
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+
+// Función para establecer el modo
+function setThemeMode(prefersDarkMode) {
+  if (prefersDarkMode) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
+// Aplicar el modo al cargar la página
+setThemeMode(prefersDarkMode);
+
+// Escuchar cambios en la preferencia de modo
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  setThemeMode(e.matches);
+});
+
+
+
 
 var cuadros = document.querySelectorAll ('.cuadro');
 
@@ -25,3 +48,4 @@ for (var i = 0; i < cuadros.length; i++) {
 
   }
 }
+ 
