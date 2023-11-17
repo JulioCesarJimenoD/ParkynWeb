@@ -1,5 +1,13 @@
 /* styles.css */
 
+.dark-mode {
+  /* Define aquí tus estilos para el modo oscuro */
+  /* Por ejemplo: */
+  background-color: #333;
+  color: #fff;
+}
+
+
 /* Estilos para el encabezado */
 header {
     background-color:  #183047;
@@ -9,7 +17,7 @@ header {
 }
 
 h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: sans-serif;
 }
 
 
@@ -24,14 +32,14 @@ body {
      display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:75vh;
   }
   
   
   img {
 
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 
 /* Estilos para la barra de navegación */
@@ -43,6 +51,12 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 10px;
+}
+
+footer {
+  height: 25px;
+  background-color: #183047; /* Cambia el color de fondo del pie de página */
+  padding: 21px;
 }
 
 

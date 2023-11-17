@@ -1,4 +1,11 @@
 
+.dark-mode {
+  /* Define aquí tus estilos para el modo oscuro */
+  /* Por ejemplo: */
+  background-color: #333;
+  color: #fff;
+}
+
 
 .container {
   
