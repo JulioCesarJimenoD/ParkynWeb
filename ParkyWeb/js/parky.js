@@ -1,27 +1,18 @@
-// Obtener todos los cuadros por su clase
-
-var cuadros = document.querySelectorAll ('.cuadro');
-
-var estados = [ 
-
-  'disponible', 'ocupado', 'deshabilitado', 'deshabilitado', 'deshabilitado', 'deshabilitado', 'deshabilitado', 'deshabilitado' ];
-
-
-// Iterar sobre los cuadros y asignarles colores y estado según su posición en el array 'estados'
-
-for (var i = 0; i < cuadros.length; i++) {
-
-  if (estados[i] === 'disponible') {
-    cuadros[i].style.backgroundColor = 'green';
-
-  } else if (estados[i] === 'ocupado') {
-    cuadros[i].style.backgroundColor = 'red';
-
-  } else if (estados[i] === 'deshabilitado') {
-    cuadros[i].style.backgroundColor = 'Gray';
-    cuadros[i].classList.add('deshabilitado'); 
+fetch('http://www.parkyapi.somee.com/api/Parqueo/GetParqueos')
+  .then(response => response.json())
+  .then(data => {
     
-    // Agregar la clase para el estado deshabilitado
+    for (var i = 0; i < data.length; i++) {
+      var nombre = data[i].nombre;
+      var disponibilidad = data[i].disponibilidad;
 
-  }
-}
+      
+      var cuadro = document.getElementById(nombre);
+
+      if (cuadro) {
+        // Asignar el color basado en la disponibilidad obtenida de la API
+        cuadro.style.backgroundColor = disponibilidad ? 'green' : 'red';
+      }
+    }
+  })
+  .catch(error => console.error('Error:', error));
