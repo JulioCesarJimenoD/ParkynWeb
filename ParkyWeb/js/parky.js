@@ -1,3 +1,23 @@
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+
+// Función para establecer el modo
+function setThemeMode(prefersDarkMode) {
+  if (prefersDarkMode) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+}
+
+// Aplicar el modo al cargar la página
+setThemeMode(prefersDarkMode);
+
+// Escuchar cambios en la preferencia de modo
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+  setThemeMode(e.matches);
+});
+
 fetch('http://www.parkyapi.somee.com/api/Parqueo/GetParqueos')
   .then(response => response.json())
   .then(data => {
